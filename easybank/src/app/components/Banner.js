@@ -9,11 +9,10 @@ const Banner = () => {
       link="#"
       color="white"
       cssPlus="
-	  	margin: 2.1rem 0;
+        margin: 3.6rem 0 0 0;
 		width: fit-content;
-		margin: auto;
-		//   @media (min-width: 750px) {display: none};
-		  "
+		  @media (max-width: 750px) {margin: 3.2rem auto 0 auto;};
+		"
     >
       {" "}
       Request Invite
@@ -24,8 +23,10 @@ const Banner = () => {
       className="bannerSection"
       css={css`
         width: 100%;
-        height: 60vh;
+        height: 45.6vw;
         display: flex;
+        flex-direction: row-reverse;
+        background-color: var(--verylightgrey);
         @media (max-width: 750px) {
           flex-direction: column;
           height: auto;
@@ -36,69 +37,83 @@ const Banner = () => {
         className="bannerImages"
         css={css`
           position: relative;
-          width: 50%;
+          width: 78%;
           height: auto;
           display: flex;
-		  align-item: center:
-		  justify-content: center;
+          align-item: center;
+          justify-content: center;
+          overflow-x: hidden;
           @media (max-width: 750px) {
             width: 100%;
-    		height: 79.5vw;
-			justify-content: center;
-
+            height: 79.5vw;
           }
         `}
       >
-        <Image
-          className="bannerMobileBg"
-          src="/bg-intro-mobile.svg"
-          width="0"
-          height="0"
+        <div
+          className="bannerBgContainer"
           css={css`
             width: 100%;
-            height: auto;
-            z-index: 50;
-            position: absolute;
-            display: none;
-            @media (max-width: 750px) {
-              display: flex;
-              top: -6.45rem;
-            }
+            height: 100%;
+            overflow: hidden;
           `}
-          alt="banner background mobile design"
-        />
-        <Image
-          className="bannerDesktopBg"
-          src="/bg-intro-desktop.svg"
-          width={0}
-          height={0}
-          css={css`
-            width: 100%;
-            height: auto;
-            z-index: 50;
-            position: absolute;
-            @media (max-width: 750px) {
+        >
+          {" "}
+          <Image
+            className="bannerMobileBg"
+            src="/bg-intro-mobile.svg"
+            width="0"
+            height="0"
+            css={css`
+              width: 100%;
+              height: auto;
+              z-index: 50;
+              // position: absolute;
               display: none;
-            }
-          `}
-          alt="banner background desktop design"
-        />
+              @media (max-width: 750px) {
+                display: flex;
+                top: -6.45rem;
+              }
+            `}
+            alt="banner background mobile design"
+          />
+          <Image
+            className="bannerDesktopBg"
+            src="/bg-intro-desktop.svg"
+            width={0}
+            height={0}
+            css={css`
+              width: 100%;
+              height: auto;
+              z-index: 50;
+              scale: 1.58;
+              transform: translate(10vw, -3.1vw);
+              // position: absolute;
+              @media (max-width: 750px) {
+                display: none;
+                scale: 1;
+                transform: translate(0, 0);
+              }
+            `}
+            alt="banner background desktop design"
+          />
+        </div>
+
         <Image
           className="phoneMockups"
           src="/image-mockups.png"
           width={1000}
           height={1000}
           css={css`
-            width: 100%;
+            transform: translate(10.5vw, -8.5vw);
+            width: 95%;
             height: auto;
             z-index: 55;
             position: absolute;
             display: flex;
             @media (max-width: 750px) {
-              //   display: none;
-              //   transform: translateY(-5%);
               bottom: 0;
               width: 92%;
+              transform: translate(0, 0);
             }
           `}
           alt="banner background overlay of phones with app loaded"
@@ -107,11 +122,13 @@ const Banner = () => {
       <div
         className="bannerTextArea"
         css={css`
-          //   width: 100%s
-          text-align: center;
+          margin: 11.7vw 0rem 0rem 11.5vw;
+          width: 45%;
           @media (max-width: 750px) {
-            // height: 45vh;
             padding: 2.5rem;
+            text-align: center;
+            margin: 0;
+            width: 100%;
           }
         `}
       >
@@ -119,10 +136,14 @@ const Banner = () => {
           className="bannerHeader"
           css={css`
             color: var(--darkblue);
-            font-size: 3.9rem;
+            font-size: 5.6rem;
             font-weight: 300;
+            letter-spacing: -0.03ch;
+            margin-bottom: 2rem;
             @media (max-width: 750px) {
+              font-size: 3.9rem;
               margin-bottom: 1.77rem;
+              letter-spacing: 0ch;
             }
           `}
         >
@@ -131,9 +152,18 @@ const Banner = () => {
         <p
           css={css`
             color: var(--grayishblue);
+            font-size: 1.8rem;
+            padding-right: 1.1vw;
+            font-weight: 300;
+            line-height: 2.6ch;
+            margin: 2.25rem 0;
+            letter-spacing: -0.02ch;
             @media (max-width: 750px) {
+              font-size: 1.5rem;
               line-height: 2.5rem;
               margin-bottom: 3rem;
+              padding-right: 0;
+              margin: 1.8rem 0;
             }
           `}
         >

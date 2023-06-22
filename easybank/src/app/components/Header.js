@@ -7,7 +7,7 @@ const Header = ({ children }) => (
     css={css`
       position: sticky;
       width: 100%;
-      background-color: rgba(251, 251, 251);
+      background-color: var(--white);
       //   box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.25);
       display: flex;
       align-items: center;

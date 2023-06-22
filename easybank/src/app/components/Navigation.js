@@ -155,7 +155,7 @@ const Navigation = ({ linkItems }) => {
                 border-bottom: 2.5px solid transparent;
                 padding: ${isMenuOpen ? "0" : "3rem 0"};
                 width: 100%;
-                &:hover {
+                @media &:hover {
                   background: linear-gradient(white, white) padding-box,
                     linear-gradient(
                       90deg,
