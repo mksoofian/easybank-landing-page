@@ -42,7 +42,6 @@ const Banner = () => {
           display: flex;
           align-item: center;
           justify-content: center;
-          overflow-x: hidden;
           @media (max-width: 750px) {
             width: 100%;
             height: 79.5vw;
