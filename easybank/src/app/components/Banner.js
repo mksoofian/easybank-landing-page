@@ -19,7 +19,7 @@ const Banner = () => {
     </Btn>
   );
   return (
-    <div
+    <section
       className="bannerSection"
       css={css`
         width: 100%;
@@ -27,6 +27,7 @@ const Banner = () => {
         display: flex;
         flex-direction: row-reverse;
         background-color: var(--verylightgrey);
+        overflow-x: clip;
         @media (max-width: 750px) {
           flex-direction: column;
           height: auto;
@@ -53,7 +54,7 @@ const Banner = () => {
           css={css`
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow: clip;
           `}
         >
           {" "}
@@ -66,7 +67,6 @@ const Banner = () => {
               width: 100%;
               height: auto;
               z-index: 50;
-              // position: absolute;
               display: none;
               @media (max-width: 750px) {
                 display: flex;
@@ -86,7 +86,6 @@ const Banner = () => {
               z-index: 50;
               scale: 1.58;
               transform: translate(10vw, -3.1vw);
-              // position: absolute;
               @media (max-width: 750px) {
                 display: none;
                 scale: 1;
@@ -173,7 +172,7 @@ const Banner = () => {
         </p>
         {ReqBtn}
       </div>
-    </div>
+    </section>
   );
 };
 export default Banner;
