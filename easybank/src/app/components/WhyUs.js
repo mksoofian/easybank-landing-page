@@ -18,7 +18,7 @@ const WhyUs = ({ reasonInfo }) => {
         width: 100%;
         position: relative;
         z-index: 32;
-        padding: 7vw 11.5vw;
+        padding: 7vw 11.5vw 2vw 11.5vw;
         background-color: var(--lightgrayishblue);
         @media (max-width: 750px) {
           padding: 6.25rem 2.5rem 1rem 2.5rem;
@@ -91,6 +91,7 @@ const WhyUs = ({ reasonInfo }) => {
         {reasonInfo.map((reason) => (
           <div
             className="reasonTile"
+            key={reason.title}
             css={css`
               width: 25%;
               @media (max-width: 750px) {
@@ -111,7 +112,6 @@ const WhyUs = ({ reasonInfo }) => {
             />
             <h3
               className="reasonHeader"
-              key={reason.title}
               css={css`
                 font-weight: 400;
                 font-size: 2.4rem;

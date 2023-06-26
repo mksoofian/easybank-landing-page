@@ -7,20 +7,19 @@ const LatestArticles = ({ articleInfo }) => {
     <section
       className="LatestArticlesSection"
       css={css`
-        // width: 100%;
-        // padding: 7vw 11.5vw;
-          background-color: var(--verylightgrey);
-    	  padding: 6.25rem 2.5rem 2.7rem 2.5rem;
+        padding: 6vw 11.5vw;
+        background-color: var(--verylightgrey);
+        @media (max-width: 750px) {
+          padding: 6.25rem 2.5rem 2.7rem 2.5rem;
         }
       `}
     >
       <h2
         className="LatestArticlesHeader"
         css={css`
-          // font-weight: 400;
-          // font-size: 4.2rem;
-          // letter-spacing: -0.08ch;
-          // margin-top: 0.15rem;
+          font-weight: 400;
+          font-size: 4.2rem;
+          letter-spacing: -0.06ch;
           color: var(--darkblue);
 
           @media (max-width: 750px) {
@@ -38,9 +37,8 @@ const LatestArticles = ({ articleInfo }) => {
         className="articlesContainer"
         css={css`
           display: flex;
-          //   width: 100%;
-          //   margin: 7rem 0rem;
-          //   gap: 2.7%;
+          margin: 4.75rem 0rem;
+          gap: 2.7%;
           @media (max-width: 750px) {
             flex-direction: column;
             width: 100%;
@@ -52,8 +50,9 @@ const LatestArticles = ({ articleInfo }) => {
         {articleInfo.map((article) => (
           <div
             className="articleCard"
+            key={article.title}
             css={css`
-              width: 20%;
+              width: 23%;
               background-color: var(--verylightgrey);
               @media (max-width: 750px) {
                 width: 100%;
@@ -68,9 +67,11 @@ const LatestArticles = ({ articleInfo }) => {
               css={css`
                 border-radius: 0.5rem 0.5rem 0 0;
                 object-fit: cover;
+                width: 100%;
+                max-height: 20rem;
+
                 @media (max-width: 750px) {
-                  width: 100%;
-                  max-height: 20rem;
+                  //   max-height: 20rem;
                 }
               `}
               alt={article.imageAlt}
@@ -83,7 +84,7 @@ const LatestArticles = ({ articleInfo }) => {
                 flex-direction: column;
                 gap: 1rem;
                 border-radius: 0 0 0.5rem 0.5rem;
-
+                padding: 2.5rem 3rem 2rem 2.5rem;
                 @media (max-width: 750px) {
                   padding: 2.5rem 3rem 2rem 3rem;
                 }
@@ -93,6 +94,9 @@ const LatestArticles = ({ articleInfo }) => {
                 className="author"
                 css={css`
                   color: var(--grayishblue);
+                  font-size: 1rem;
+                  letter-spacing: -0.03ch;
+                  //
                   @media (max-width: 750px) {
                     font-size: 1rem;
                     letter-spacing: -0.03ch;
@@ -104,14 +108,12 @@ const LatestArticles = ({ articleInfo }) => {
               </p>
               <h3
                 className="articleTitle"
-                key={article.title}
                 css={css`
                   color: var(--darkblue);
-
-                  // font-weight: 400;
-                  // font-size: 2.4rem;
-                  // margin-top: 3.75rem;
-                  // letter-spacing: -0.03ch;
+                  font-weight: 400;
+                  font-size: 1.6rem;
+                  letter-spacing: -0.04ch;
+                  line-height: 2ch;
                   @media (max-width: 750px) {
                     font-weight: 400;
                     font-size: 1.6rem;
@@ -127,10 +129,10 @@ const LatestArticles = ({ articleInfo }) => {
                 className="articleText"
                 css={css`
                   color: var(--grayishblue);
-                  // line-height: 2.72ch;
-                  // letter-spacing: -0.025ch;
-                  // margin: 2.5rem 0 0 0;
-                  // font-size: 1.6rem;
+                  line-height: 2.4ch;
+                  letter-spacing: 0.04ch;
+                  font-size: 1.2rem;
+                  margin-bottom: 2.25rem;
                   @media (max-width: 750px) {
                     line-height: 2.4ch;
                     letter-spacing: 0.04ch;
