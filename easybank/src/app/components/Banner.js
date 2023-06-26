@@ -11,7 +11,7 @@ const Banner = () => {
       cssPlus="
         margin: 3.6rem 0 0 0;
 		width: fit-content;
-		  @media (max-width: 750px) {margin: 3.2rem auto 0 auto;};
+		  @media (max-width: 750px) {margin: 3.1rem auto 6.5rem auto;};
 		"
     >
       {" "}
@@ -27,7 +27,6 @@ const Banner = () => {
         display: flex;
         flex-direction: row-reverse;
         background-color: var(--verylightgrey);
-        overflow-x: clip;
         @media (max-width: 750px) {
           flex-direction: column;
           height: auto;
@@ -54,7 +53,8 @@ const Banner = () => {
           css={css`
             width: 100%;
             height: 100%;
-            overflow: clip;
+            @media (min-width: 750px) {
+            }
           `}
         >
           {" "}
@@ -68,6 +68,7 @@ const Banner = () => {
               height: auto;
               z-index: 50;
               display: none;
+              position: relative;
               @media (max-width: 750px) {
                 display: flex;
                 top: -6.45rem;
@@ -86,6 +87,8 @@ const Banner = () => {
               z-index: 50;
               scale: 1.58;
               transform: translate(10vw, -3.1vw);
+              position: relative;
+              z-index: 30;
               @media (max-width: 750px) {
                 display: none;
                 scale: 1;

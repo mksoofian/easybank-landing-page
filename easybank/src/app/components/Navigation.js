@@ -103,7 +103,7 @@ const Navigation = ({ linkItems }) => {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          z-index: -5;
+          z-index: -25;
 
           @media (max-width: 750px) {
             position: fixed;

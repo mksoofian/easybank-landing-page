@@ -7,12 +7,17 @@ import Navigation from "./components/Navigation";
 import Btn from "./components/Btn";
 import Banner from "./components/Banner";
 import WhyUs from "./components/WhyUs";
+import LatestArticles from "./components/LatestArticles";
 
 // Assets
 import iconOnlineBanking from "../../public/icon-online.svg";
 import iconBudgeting from "../../public/icon-budgeting.svg";
 import iconOnboarding from "../../public/icon-onboarding.svg";
 import iconApi from "../../public/icon-api.svg";
+import imageConfetti from "../../public/image-confetti.jpg";
+import imageCurrency from "../../public/image-currency.jpg";
+import imagePlane from "../../public/image-plane.jpg";
+import imageRestaurant from "../../public/image-restaurant.jpg";
 
 export default function Home() {
   const linkedItems = [
@@ -44,6 +49,36 @@ export default function Home() {
       text: "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
     },
   ];
+  const articles = [
+    {
+      imagePath: imageCurrency,
+      imageAlt: "Image of various currencies",
+      author: "Claire Robinson",
+      title: "Receive money in any currency with no fees",
+      text: "The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single … ",
+    },
+    {
+      imagePath: imageRestaurant,
+      imageAlt: "Image of plated food at a restaurant",
+      author: "Wilson Hutton",
+      title: "Treat yourself without worrying about money",
+      text: "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …",
+    },
+    {
+      imagePath: imagePlane,
+      imageAlt: "Image of an aircraft",
+      author: "Wilson Hutton",
+      title: "Take your Easybank card wherever you go",
+      text: "We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you … ",
+    },
+    {
+      imagePath: imageConfetti,
+      imageAlt: "Image of party confetti with a blue backdrop",
+      author: "Claire Robinson",
+      title: "Our invite-only Beta accounts are now live!",
+      text: "After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site...",
+    },
+  ];
   return (
     <>
       <Header>
@@ -60,6 +95,7 @@ export default function Home() {
       <main>
         <Banner />
         <WhyUs reasonInfo={reasons} />
+        <LatestArticles articleInfo={articles} />
       </main>
       <footer> This is the Footer section</footer>
     </>
