@@ -108,7 +108,7 @@ const Navigation = ({ linkItems }) => {
           @media (max-width: 750px) {
             position: fixed;
             inset: 6.5rem 0rem 0rem 0rem;
-            display: flex;
+            display: ${isMenuOpen ? "flex" : "none"};
             align-items: center;
             background: ${isMenuOpen
               ? "rgb(255,255,255);background: linear-gradient(180deg, rgba(255,255,255,0) 33%, rgba(255,255,255,1) 100%);"
@@ -155,7 +155,7 @@ const Navigation = ({ linkItems }) => {
                 border-bottom: 2.5px solid transparent;
                 padding: ${isMenuOpen ? "0" : "3rem 0"};
                 width: 100%;
-                @media &:hover {
+                &:hover {
                   background: linear-gradient(white, white) padding-box,
                     linear-gradient(
                       90deg,
