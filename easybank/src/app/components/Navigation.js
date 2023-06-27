@@ -122,7 +122,6 @@ const Navigation = ({ linkItems }) => {
           css={css`
 		  position: relative;
           display: flex;
-	      gap: 2.25rem;
           padding: 0 0 0 2rem;
           align-items: center;
           @media (max-width: 750px) {
@@ -132,7 +131,6 @@ const Navigation = ({ linkItems }) => {
 			  flex-direction: column;
 			  align-items: center;
 			  justify-content: space-evenly;
-			  gap: 0rem;
 			  background-color: white;
 			  z-index: 98;
 			  height: 26.6rem;
@@ -175,6 +173,8 @@ const Navigation = ({ linkItems }) => {
                 css={css`
                   color: var(--grayishblue);
                   margin: auto;
+                  width: 7rem;
+                  text-align: center;
                   @media (max-width: 750px) {
                     font-size: 1.8rem;
                     color: black;
