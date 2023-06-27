@@ -7,7 +7,7 @@ const LatestArticles = ({ articleInfo }) => {
     <section
       className="LatestArticlesSection"
       css={css`
-        padding: 6vw 11.5vw 0vw 11.5vw;
+        padding: 6vw 11.5vw 1vw 11.5vw;
         background-color: var(--verylightgrey);
         @media (max-width: 750px) {
           padding: 6.25rem 2.5rem 5.6rem 2.5rem;
@@ -106,25 +106,37 @@ const LatestArticles = ({ articleInfo }) => {
                 {" "}
                 By {article.author}
               </p>
-              <h3
-                className="articleTitle"
+              <a
+                href={article.href}
                 css={css`
-                  color: var(--darkblue);
-                  font-weight: 400;
-                  font-size: 1.6rem;
-                  letter-spacing: -0.04ch;
-                  line-height: 2ch;
-                  @media (max-width: 750px) {
+                  &:hover {
+                    color: var(--limegreen);
+                  }
+                `}
+              >
+                <h3
+                  className="articleTitle"
+                  css={css`
+                    color: var(--darkblue);
                     font-weight: 400;
                     font-size: 1.6rem;
                     letter-spacing: -0.04ch;
                     line-height: 2ch;
-                    // margin-top: 2.25rem;
-                  }
-                `}
-              >
-                {article.title}
-              </h3>
+                    &:hover {
+                      color: var(--limegreen);
+                    }
+                    @media (max-width: 750px) {
+                      font-weight: 400;
+                      font-size: 1.6rem;
+                      letter-spacing: -0.04ch;
+                      line-height: 2ch;
+                      // margin-top: 2.25rem;
+                    }
+                  `}
+                >
+                  {article.title}
+                </h3>
+              </a>
               <p
                 className="articleText"
                 css={css`

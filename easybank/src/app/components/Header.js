@@ -5,7 +5,8 @@ import Image from "next/image";
 const Header = ({ children }) => (
   <header
     css={css`
-      position: sticky;
+      position: sticky !important;
+      top: 0 !important;
       width: 100%;
       background-color: var(--white);
       //   box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.25);

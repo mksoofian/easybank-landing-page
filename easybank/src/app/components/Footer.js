@@ -45,6 +45,7 @@ const Footer = ({ children }) => (
           width: 14rem;
           height: auto;
           margin: 0 auto 0 0;
+          fill: red;
           @media (max-width: 750px) {
             width: 14rem;
             height: auto;

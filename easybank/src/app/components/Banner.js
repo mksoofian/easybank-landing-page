@@ -105,8 +105,8 @@ const Banner = () => {
         <Image
           className="phoneMockups"
           src="/image-mockups.png"
-          width={1000}
-          height={1000}
+          width={2000}
+          height={2000}
           css={css`
             transform: translate(10.5vw, -8.5vw);
             width: 95%;
@@ -130,6 +130,10 @@ const Banner = () => {
           width: 45%;
           @media (max-width: 1100px) {
             margin: 5vw 0rem 0rem 11.5vw;
+            width: 52%;
+          }
+          @media (max-width: 900px) {
+            margin: 2vw 0rem 0rem 11.5vw;
           }
           @media (max-width: 750px) {
             padding: 2.5rem;
@@ -147,12 +151,12 @@ const Banner = () => {
             font-weight: 300;
             letter-spacing: -0.03ch;
             margin-bottom: 2rem;
-            // @media (max-width: 1230px) {
-            //   font-size: 4.8rem;
-            // }
-            // @media (max-width: 1100px) {
-            //   font-size: 3.6rem;
-            // }
+            @media (max-width: 1230px) {
+              font-size: 4.8rem;
+            }
+            @media (max-width: 950px) {
+              font-size: 4.2rem;
+            }
             @media (max-width: 750px) {
               font-size: 3.9rem;
               margin-bottom: 1.77rem;
@@ -171,7 +175,7 @@ const Banner = () => {
             line-height: 2.6ch;
             margin: 2.25rem 0;
             letter-spacing: -0.02ch;
-            @media (max-width: 1100px) {
+            @media (max-width: 1230px) {
               font-size: 1.4rem;
             }
             @media (max-width: 750px) {
