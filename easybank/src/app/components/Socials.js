@@ -38,13 +38,13 @@ const Socials = () => (
       className="socialMediaContainer"
       css={css`
         width: fit-content;
-      	display: flex;
-      	align-items: center;
-	  	gap: 1.65rem;
-            //   @media (max-width: 750px) {
-
-              }
-            `}
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        @media (max-width: 750px) {
+          gap: 1.65rem;
+        }
+      `}
     >
       {socialMedia.map((socialMedia) => (
         <Image

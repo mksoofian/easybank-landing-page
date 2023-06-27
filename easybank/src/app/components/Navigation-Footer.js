@@ -3,14 +3,27 @@ import { css } from "@emotion/react";
 
 const FooterNav = ({ linkItems }) => {
   return (
-    <nav css={css``}>
+    <nav
+      css={css`
+        margin-left: 13rem;
+        @media (max-width: 750px) {
+          margin-left: 0;
+        }
+      `}
+    >
       <ul
         className="footer-nav-list"
         css={css`
           display: flex;
           flex-direction: column;
+          gap: 1.65rem;
+          flex-wrap: wrap;
+          max-height: 10rem;
+          width: auto;
           @media (max-width: 750px) {
             gap: 1.65rem;
+            flex-wrap: nowrap;
+            max-height: fit-content;
           }
         `}
       >
@@ -21,10 +34,12 @@ const FooterNav = ({ linkItems }) => {
             css={css`
               text-decoration: none;
               list-style-type: none;
+      		  margin: 0 11rem 0 0;
                 &:hover > a {
                   color: rgba(49, 211, 92, 1);
                 }
 			  @media (max-width: 750px) {
+				margin: 0;
                 }
               }
             `}

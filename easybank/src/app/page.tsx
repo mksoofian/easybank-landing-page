@@ -119,7 +119,9 @@ export default function Home() {
         <Btn
           link="#"
           color="white"
-          cssPlus="@media (max-width: 750px) { width: fit-content};"
+          cssPlus="
+		  margin: 0 0 0 auto;
+		  @media (max-width: 750px) {width: fit-content; margin: 0;};"
         >
           {" "}
           Request Invite

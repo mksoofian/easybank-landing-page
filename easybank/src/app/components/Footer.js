@@ -7,16 +7,18 @@ const Footer = ({ children }) => (
   <footer
     css={css`
       width: 100%;
+      height: 19rem;
       background-color: var(--darkblue);
-      height: auto; // UPDATE THIS ASAP
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 4rem 11.5vw;
+      //   justify-content: space-between;
       z-index: 94;
+      padding: 4.5rem 11.5vw 5rem 11.5vw;
       @media (max-width: 750px) {
         flex-direction: column;
         justify-content: center;
+        height: auto;
+        padding: 4rem 11.5vw;
       }
     `}
   >
@@ -26,6 +28,9 @@ const Footer = ({ children }) => (
         display: flex;
         flex-direction: column;
         align-items: center;
+        // gap: 2rem;
+        height: 100%;
+        justify-content: space-between;
         @media (max-width: 750px) {
           gap: 8.5vw;
         }
@@ -37,9 +42,13 @@ const Footer = ({ children }) => (
         width="0"
         height="0"
         css={css`
+          width: 14rem;
+          height: auto;
+          margin: 0 auto 0 0;
           @media (max-width: 750px) {
             width: 14rem;
             height: auto;
+            margin: 0;
           }
         `}
       />
@@ -51,8 +60,9 @@ const Footer = ({ children }) => (
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
+        // margin: 0 10rem 0 0;
         @media (max-width: 750px) {
+          text-align: center;
           margin: 3.65rem 0 3.65rem 0;
           gap: 1rem;
         }
@@ -65,8 +75,13 @@ const Footer = ({ children }) => (
       css={css`
         display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 95%;
+        justify-content: space-between;
+        margin: 0 0 0 auto;
         @media (max-width: 750px) {
+          align-items: center;
+          height: auto;
+          margin: 0;
         }
       `}
     >
@@ -74,7 +89,7 @@ const Footer = ({ children }) => (
       <p
         css={css`
           color: var(--white);
-          etter-spacing: -0.03ch;
+          letter-spacing: -0.03ch;
           @media (max-width: 750px) {
             margin-top: 3rem;
           }

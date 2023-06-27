@@ -7,7 +7,7 @@ const LatestArticles = ({ articleInfo }) => {
     <section
       className="LatestArticlesSection"
       css={css`
-        padding: 6vw 11.5vw;
+        padding: 6vw 11.5vw 0vw 11.5vw;
         background-color: var(--verylightgrey);
         @media (max-width: 750px) {
           padding: 6.25rem 2.5rem 5.6rem 2.5rem;
