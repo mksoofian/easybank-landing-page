@@ -8,6 +8,9 @@ import Btn from "./components/Btn";
 import Banner from "./components/Banner";
 import WhyUs from "./components/WhyUs";
 import LatestArticles from "./components/LatestArticles";
+import Footer from "./components/Footer";
+import Socials from "./components/Socials";
+import FooterNav from "./components/Navigation-Footer";
 
 // Assets
 import iconOnlineBanking from "../../public/icon-online.svg";
@@ -18,6 +21,11 @@ import imageConfetti from "../../public/image-confetti.jpg";
 import imageCurrency from "../../public/image-currency.jpg";
 import imagePlane from "../../public/image-plane.jpg";
 import imageRestaurant from "../../public/image-restaurant.jpg";
+import iconFacebook from "../../public/icon-facebook.svg";
+import iconYoutube from "../../public/icon-youtube.svg";
+import iconTwitter from "../../public/icon-twitter.svg";
+import iconPintrest from "../../public/icon-pinterest.svg";
+import iconInstagram from "../../public/icon-instagram.svg";
 
 export default function Home() {
   const linkedItems = [
@@ -79,6 +87,14 @@ export default function Home() {
       text: "After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site...",
     },
   ];
+  const linkedItems2 = [
+    { title: "About Us", href: "#" },
+    { title: "Contact", href: "#" },
+    { title: "Blog", href: "#" },
+    { title: "Careers", href: "#" },
+    { title: "Support", href: "#" },
+    { title: "Privacy Policy", href: "#" },
+  ];
   return (
     <>
       <Header>
@@ -97,7 +113,18 @@ export default function Home() {
         <WhyUs reasonInfo={reasons} />
         <LatestArticles articleInfo={articles} />
       </main>
-      <footer> This is the Footer section</footer>
+      <Footer>
+        <Socials />
+        <FooterNav linkItems={linkedItems2} />
+        <Btn
+          link="#"
+          color="white"
+          cssPlus="@media (max-width: 750px) { width: fit-content};"
+        >
+          {" "}
+          Request Invite
+        </Btn>
+      </Footer>
     </>
   );
 }

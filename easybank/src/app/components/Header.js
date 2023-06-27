@@ -24,7 +24,7 @@ const Header = ({ children }) => (
     `}
   >
     <Image
-      src={"/logo.svg"}
+      src={"/logo-header.svg"}
       alt="logo"
       width="0"
       height="0"

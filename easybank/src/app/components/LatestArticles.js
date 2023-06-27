@@ -10,7 +10,7 @@ const LatestArticles = ({ articleInfo }) => {
         padding: 6vw 11.5vw;
         background-color: var(--verylightgrey);
         @media (max-width: 750px) {
-          padding: 6.25rem 2.5rem 2.7rem 2.5rem;
+          padding: 6.25rem 2.5rem 5.6rem 2.5rem;
         }
       `}
     >
@@ -26,7 +26,7 @@ const LatestArticles = ({ articleInfo }) => {
             font-weight: 400;
             font-size: 3.2rem;
             letter-spacing: -0.03ch;
-            margin-top: 4.25rem;
+            margin-top: 2.25rem;
             text-align: center;
           }
         `}

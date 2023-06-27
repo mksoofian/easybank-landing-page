@@ -9,7 +9,7 @@ const Btn = ({ color, link, children, cssPlus }) => {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1.25rem 3.15rem;
+        padding: 1.26rem 3.15rem;
         font-size: 1.8rem;
         border-radius: 3rem;
         background: rgb(49, 211, 92);
