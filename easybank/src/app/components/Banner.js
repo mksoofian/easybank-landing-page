@@ -42,6 +42,9 @@ const Banner = () => {
           display: flex;
           align-item: center;
           justify-content: center;
+          //   @media (max-width: 1250px) {
+          //     width: 52%;
+          //   }
           @media (max-width: 750px) {
             width: 100%;
             height: 79.5vw;
@@ -125,6 +128,9 @@ const Banner = () => {
         css={css`
           margin: 11.7vw 0rem 0rem 11.5vw;
           width: 45%;
+          @media (max-width: 1100px) {
+            margin: 5vw 0rem 0rem 11.5vw;
+          }
           @media (max-width: 750px) {
             padding: 2.5rem;
             text-align: center;
@@ -141,6 +147,12 @@ const Banner = () => {
             font-weight: 300;
             letter-spacing: -0.03ch;
             margin-bottom: 2rem;
+            // @media (max-width: 1230px) {
+            //   font-size: 4.8rem;
+            // }
+            // @media (max-width: 1100px) {
+            //   font-size: 3.6rem;
+            // }
             @media (max-width: 750px) {
               font-size: 3.9rem;
               margin-bottom: 1.77rem;
@@ -159,6 +171,9 @@ const Banner = () => {
             line-height: 2.6ch;
             margin: 2.25rem 0;
             letter-spacing: -0.02ch;
+            @media (max-width: 1100px) {
+              font-size: 1.4rem;
+            }
             @media (max-width: 750px) {
               font-size: 1.5rem;
               line-height: 2.5rem;

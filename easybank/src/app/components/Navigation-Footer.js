@@ -5,7 +5,10 @@ const FooterNav = ({ linkItems }) => {
   return (
     <nav
       css={css`
-        margin-left: 13rem;
+        margin-left: 9vw;
+        @media (max-width: 950px) {
+          margin: 0 0 0 3vw;
+        }
         @media (max-width: 750px) {
           margin-left: 0;
         }
@@ -34,9 +37,12 @@ const FooterNav = ({ linkItems }) => {
             css={css`
               text-decoration: none;
               list-style-type: none;
-      		  margin: 0 11rem 0 0;
+      		  margin: 0 7.65vw 0 0;
                 &:hover > a {
                   color: rgba(49, 211, 92, 1);
+                }
+			  @media (max-width: 950px) {
+      		  margin: 0 0vw 0 0;
                 }
 			  @media (max-width: 750px) {
 				margin: 0;
