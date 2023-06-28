@@ -17,7 +17,7 @@ const Header = ({ children }) => (
       padding: 0rem 11.5vw;
       z-index: 94;
       @media (max-width: 850px) {
-        padding: 2rem 5vw;
+        padding: 0rem 5vw;
       }
       @media (max-width: 600px) {
         padding: 2.25rem 6.25vw;
