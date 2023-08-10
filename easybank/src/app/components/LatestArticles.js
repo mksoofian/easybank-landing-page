@@ -40,7 +40,7 @@ const LatestArticles = ({ articleInfo }) => {
           margin: 4.75rem 0rem;
           justify-content: space-evenly;
           flex-wrap: wrap;
-          gap: 10rem;
+          gap: 2rem;
           @media (max-width: 750px) {
             flex-direction: column;
             width: 100%;
