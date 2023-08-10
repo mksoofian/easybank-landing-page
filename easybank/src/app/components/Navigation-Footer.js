@@ -22,7 +22,6 @@ const FooterNav = ({ linkItems }) => {
           gap: 1.65rem;
           flex-wrap: wrap;
           max-height: 10rem;
-          width: auto;
           @media (max-width: 750px) {
             gap: 1.65rem;
             flex-wrap: nowrap;

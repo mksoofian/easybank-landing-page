@@ -62,6 +62,7 @@ const Footer = ({ children }) => (
         flex-direction: column;
         justify-content: center;
         // margin: 0 10rem 0 0;
+        min-width: 35vw;
         @media (max-width: 750px) {
           text-align: center;
           margin: 3.65rem 0 3.65rem 0;

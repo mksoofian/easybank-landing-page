@@ -38,7 +38,9 @@ const LatestArticles = ({ articleInfo }) => {
         css={css`
           display: flex;
           margin: 4.75rem 0rem;
-          gap: 2.7%;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          gap: 10rem;
           @media (max-width: 750px) {
             flex-direction: column;
             width: 100%;
@@ -53,6 +55,7 @@ const LatestArticles = ({ articleInfo }) => {
             key={article.title}
             css={css`
               width: 23%;
+              min-width: 25rem;
               background-color: var(--verylightgrey);
               @media (max-width: 750px) {
                 width: 100%;
