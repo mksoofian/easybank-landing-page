@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Btn from "./Btn";
 import Image from "next/image";
 import { gsap } from "gsap";
@@ -11,20 +11,28 @@ const Navigation = ({ linkItems }) => {
     setIsMenuOpen(!isMenuOpen);
   };
   console.log(isMenuOpen);
+
+  const closeMenuToggleRef = useRef(null);
+
   const rotateAndFade = () => {
-    gsap.to(".closeMenuToggle", {
-      duration: 0.5,
-      rotation: isMenuOpen ? 0 : 90,
-      opacity: isMenuOpen ? 1 : 0,
-    });
+    if (closeMenuToggleRef.current) {
+      gsap.to(closeMenuToggleRef.current, {
+        duration: 0.5,
+        rotation: isMenuOpen ? 0 : 90,
+        opacity: isMenuOpen ? 1 : 0,
+      });
+    }
   };
+
   useEffect(() => {
-    rotateAndFade();
+    if (closeMenuToggleRef.current) {
+      rotateAndFade();
+    }
   }, [isMenuOpen]);
 
   const CloseMobileNavIcon = (
     <Image
-      className="closeMenuToggle"
+      ref={closeMenuToggleRef}
       width={0}
       height={0}
       src={"/icon-close.svg"}
@@ -34,8 +42,6 @@ const Navigation = ({ linkItems }) => {
         @media (max-width: 750px) {
           width: auto;
           height: auto;
-          //   margin-left: auto;
-          //   padding: 3.5vh 7.5vw;
         }
       `}
     />

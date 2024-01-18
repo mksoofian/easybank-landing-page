@@ -10,6 +10,7 @@ import iconInstagram from "../../../public/icon-instagram.svg";
 
 const socialMedia = [
   {
+    id: 1,
     icon: iconFacebook,
     alt: "facebook icon",
     href: "#",
@@ -20,6 +21,7 @@ const socialMedia = [
     ),
   },
   {
+    id: 2,
     icon: iconYoutube,
     alt: "youtube icon",
     href: "#",
@@ -30,6 +32,7 @@ const socialMedia = [
     ),
   },
   {
+    id: 3,
     icon: iconTwitter,
     alt: "twitter icon",
     href: "#",
@@ -40,6 +43,7 @@ const socialMedia = [
     ),
   },
   {
+    id: 4,
     icon: iconPintrest,
     alt: "pintrest icon",
     href: "#",
@@ -50,6 +54,7 @@ const socialMedia = [
     ),
   },
   {
+    id: 5,
     icon: iconInstagram,
     alt: "instagram icon",
     href: "#",
@@ -92,6 +97,7 @@ const Socials = () => (
         <a
           className="socialMediaIcons"
           href={socialMedia.href}
+          key={socialMedia.id}
           css={css`
             fill: var(--white);
             &:hover {
