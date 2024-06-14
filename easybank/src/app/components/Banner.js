@@ -4,20 +4,6 @@ import Image from "next/image";
 import Btn from "./Btn";
 
 const Banner = () => {
-  const ReqBtn = (
-    <Btn
-      link="#"
-      color="white"
-      cssPlus="
-        margin: 3.6rem 0 0 0;
-		width: fit-content;
-		  @media (max-width: 750px) {margin: 3.1rem auto 6.5rem auto;};
-		"
-    >
-      {" "}
-      Request Invite
-    </Btn>
-  );
   return (
     <section
       className="bannerSection"
@@ -192,7 +178,18 @@ const Banner = () => {
           one-stop-shop for spending, saving, budgeting, investing, and much
           more.
         </p>
-        {ReqBtn}
+        <Btn
+          link="#"
+          color="white"
+          cssPlus="
+        margin: 3.6rem 0 0 0;
+		width: fit-content;
+		  @media (max-width: 750px) {margin: 3.1rem auto 6.5rem auto;};
+		"
+        >
+          {" "}
+          Request Invite
+        </Btn>
       </div>
     </section>
   );
