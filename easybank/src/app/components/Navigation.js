@@ -10,7 +10,7 @@ const Navigation = ({ linkItems }) => {
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  console.log(isMenuOpen);
+  //   console.log(isMenuOpen); // for debugging
 
   const closeMenuToggleRef = useRef(null);
 

@@ -26,11 +26,8 @@ const Banner = () => {
           width: 78%;
           height: auto;
           display: flex;
-          align-item: center;
+          align-items: center;
           justify-content: center;
-          //   @media (max-width: 1250px) {
-          //     width: 52%;
-          //   }
           @media (max-width: 750px) {
             width: 100%;
             height: 79.5vw;
@@ -42,25 +39,21 @@ const Banner = () => {
           css={css`
             width: 100%;
             height: 100%;
-            @media (min-width: 750px) {
-            }
           `}
         >
-          {" "}
           <Image
             className="bannerMobileBg"
             src="/bg-intro-mobile.svg"
-            width="0"
-            height="0"
+            width={2000}
+            height={2000}
             css={css`
               width: 100%;
               height: auto;
-              z-index: 50;
               display: none;
-              position: relative;
+              position: absolute;
+              top: -6.45rem;
               @media (max-width: 750px) {
-                display: flex;
-                top: -6.45rem;
+                display: block;
               }
             `}
             alt="banner background mobile design"
@@ -68,20 +61,17 @@ const Banner = () => {
           <Image
             className="bannerDesktopBg"
             src="/bg-intro-desktop.svg"
-            width={0}
-            height={0}
+            width={2000}
+            height={2000}
             css={css`
               width: 100%;
               height: auto;
-              z-index: 50;
-              scale: 1.58;
-              transform: translate(10vw, -3.1vw);
-              position: relative;
-              z-index: 30;
+              display: block;
+              position: absolute;
+              transform: scale(1.58) translate(10vw, -3.1vw);
               @media (max-width: 750px) {
                 display: none;
-                scale: 1;
-                transform: translate(0, 0);
+                transform: scale(1) translate(0, 0);
               }
             `}
             alt="banner background desktop design"
@@ -99,7 +89,6 @@ const Banner = () => {
             height: auto;
             z-index: 55;
             position: absolute;
-            display: flex;
             @media (max-width: 750px) {
               bottom: 0;
               width: 92%;
@@ -173,7 +162,6 @@ const Banner = () => {
             }
           `}
         >
-          {" "}
           Take your financial life online. Your Easybank account will be a
           one-stop-shop for spending, saving, budgeting, investing, and much
           more.
@@ -183,11 +171,10 @@ const Banner = () => {
           color="white"
           cssPlus="
         margin: 3.6rem 0 0 0;
-		width: fit-content;
-		  @media (max-width: 750px) {margin: 3.1rem auto 6.5rem auto;};
-		"
+        width: fit-content;
+        @media (max-width: 750px) {margin: 3.1rem auto 6.5rem auto;};
+        "
         >
-          {" "}
           Request Invite
         </Btn>
       </div>
